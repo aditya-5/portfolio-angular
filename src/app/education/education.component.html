@@ -1,0 +1,76 @@
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card" >
+        <div class="card-body">
+          <div class="mt-5">
+            <div class="timeline">
+
+
+
+              <div class="timeline-wrapper timeline-wrapper-warning" >
+                <div class="timeline-badge" (click)="toggleManc()"></div>
+                <div class="timeline-panel" (click)="toggleManc()">
+                  <div class="timeline-heading">
+                    <h6 class="timeline-title">University of Manchester</h6>
+                    <p class="place"> Manchester, England</p>
+                  </div>
+                  <div class="timeline-body" *ngIf="MANC">
+                    <p>Two years in the making, we finally have our first beta release of Bootstrap 4.</p>
+                  </div>
+                  <div class="timeline-footer d-flex align-items-center flex-wrap">
+                      <span class="ml-md-auto font-weight-bold">19 Oct 2017</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="timeline-wrapper timeline-inverted timeline-wrapper-danger">
+                <div class="timeline-badge" (click)="toggleIIT()"></div>
+                <div class="timeline-panel" (click)="toggleIIT()">
+                  <div class="timeline-heading">
+                    <h6 class="timeline-title">Indian Institute of Technology</h6>
+                    <p class="place"> Kanpur, India</p>
+                  </div>
+                  <div class="timeline-body" *ngIf="IIT">
+                    <p>Alpha 6 has landed, and it’s one of our biggest ships to date.</p>
+                  </div>
+                  <div class="timeline-footer d-flex align-items-center flex-wrap">
+                      <span class="ml-md-auto font-weight-bold">10th Aug 2017</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="timeline-wrapper timeline-wrapper-success">
+                <div class="timeline-badge" (click)="toggleDPS()"></div>
+                <div class="timeline-panel" (click)="toggleDPS()">
+                  <div class="timeline-heading">
+                    <h6 class="timeline-title">Delhi Public School</h6>
+                    <p class="place"> Kanpur, India</p>
+                  </div>
+                  <div class="timeline-body" *ngIf="DPS">
+                    <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                  </div>
+                  <div class="timeline-footer d-flex align-items-center flex-wrap">
+                      <span class="ml-md-auto font-weight-bold">5th Sep 2016</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
