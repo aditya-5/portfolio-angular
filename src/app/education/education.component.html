@@ -1,11 +1,19 @@
 
-  <div class="row">
+<div class="row mt-4 m-4 justify-content-md-center">
+    <div class="col-lg-2">
+      <button type="button" class="form-control btn " [ngClass]="{'btn-danger':formalBool}" (click)="switchToFormal()">Formal Education</button>
+    </div>
+    <div class="col-lg-2">
+      <button type="button" class="form-control btn " [ngClass]="{'btn-danger':informalBool}"(click)="switchToInformal()">Informal Education</button>
+    </div>
+</div>
+
+  <div class="row" *ngIf="formalBool">
     <div class="col-12">
       <div class="card" >
         <div class="card-body">
           <div class="mt-5">
             <div class="timeline">
-
 
 
               <div class="timeline-wrapper timeline-wrapper-warning" >
@@ -16,10 +24,10 @@
                     <p class="place"> Manchester, England</p>
                   </div>
                   <div class="timeline-body" *ngIf="MANC">
-                    <p>Two years in the making, we finally have our first beta release of Bootstrap 4.</p>
+                    <p>Artificial Intelligence with Industrial Experience</p>
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
-                      <span class="ml-md-auto font-weight-bold">19 Oct 2017</span>
+                      <span class="ml-md-auto font-weight-bold red">Expected 2024</span>
                   </div>
                 </div>
               </div>
@@ -34,10 +42,10 @@
                     <p class="place"> Kanpur, India</p>
                   </div>
                   <div class="timeline-body" *ngIf="IIT">
-                    <p>Alpha 6 has landed, and it’s one of our biggest ships to date.</p>
+                    <p>French Language Programme - Level 1</p>
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
-                      <span class="ml-md-auto font-weight-bold">10th Aug 2017</span>
+                      <span class="ml-md-auto font-weight-bold">August, 2019 - May, 2020</span>
                   </div>
                 </div>
               </div>
@@ -53,24 +61,310 @@
                     <p class="place"> Kanpur, India</p>
                   </div>
                   <div class="timeline-body" *ngIf="DPS">
-                    <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                    <p></p>
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
-                      <span class="ml-md-auto font-weight-bold">5th Sep 2016</span>
+                      <span class="ml-md-auto font-weight-bold">April, 2007 - May, 2019</span>
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+<!-- ***** -->
+
+<div class="row" *ngIf="informalBool">
+  <div class="col-12">
+    <div class="card" >
+      <div class="card-body">
+        <div class="mt-5">
+          <div class="timeline">
+
+
+            <!-- ************************ -->
+            <!-- Flutter -->
+
+            <div class="timeline-wrapper timeline-wrapper-warning">
+              <div class="timeline-badge" (click)="toggleInformal(0)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(0)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Flutter & Dart - The Complete Guide</h6>
+                  <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[0]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold red">Ongoing</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- ************************ -->
+            <!-- Angular -->
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-success">
+              <div class="timeline-badge" (click)="toggleInformal(1)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(1)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Angular: The Complete Guide</h6>
+                  <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[1]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">February 2021</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ************************ -->
+            <!-- Photography -->
+
+            <div class="timeline-wrapper timeline-wrapper-info">
+              <div class="timeline-badge" (click)="toggleInformal(2)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(2)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Photography Masterclass</h6>
+                  <p class="place"> <b>Video School Online</b> : Phil Ebiner and William Carnahan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[2]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">February 2021</span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ************************ -->
+            <!-- Web Development -->
+
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-primary">
+              <div class="timeline-badge" (click)="toggleInformal(3)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(3)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Web Development Bootcamp</h6>
+                  <p class="place"> <b>Udemy</b> : Colt Steele</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[3]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">June 2020</span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ************************ -->
+            <!-- DESIGNING -->
+
+
+            <div class="timeline-wrapper timeline-wrapper-warning">
+              <div class="timeline-badge" (click)="toggleInformal(4)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(4)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Adobe Photoshop CC</h6>
+                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[4]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">May 2020</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-danger">
+              <div class="timeline-badge" (click)="toggleInformal(5)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(5)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">After Effects CC Masterclass</h6>
+                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[5]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">May 2020</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="timeline-wrapper timeline-wrapper-success">
+              <div class="timeline-badge" (click)="toggleInformal(6)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(6)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Adobe Premiere Pro CS6</h6>
+                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[6]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">May 2020</span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ************************ -->
+            <!-- ZSECURITY -->
+
+            <div class="timeline-wrapper  timeline-inverted timeline-wrapper-info">
+              <div class="timeline-badge" (click)="toggleInformal(7)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(7)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Learn Ethical Hacking From Scratch</h6>
+                  <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[7]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">April 2020</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="timeline-wrapper timeline-wrapper-primary">
+              <div class="timeline-badge" (click)="toggleInformal(8)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(8)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Learn Social Engineering From Scratch</h6>
+                  <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[8]">
+                  <p>Alpha 5 has arrived just over a month after Alpha 4 with some major feature improvements and a boat load of bug fixes.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">April 2020</span>
+                </div>
+              </div>
+            </div>
+
+          <!-- ************************ -->
+          <!-- COURSERA PYTHON -->
+
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-warning">
+              <div class="timeline-badge" (click)="toggleInformal(9)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(9)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Python for Everybody Specialization</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[9]">
+                  <p>The Python Specialization was a combination of the five sub-courses listed below. </p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">March 2020</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper timeline-wrapper-danger">
+              <div class="timeline-badge" (click)="toggleInformal(10)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(10)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Capstone: Retrieving, Processing, and Visualizing Data with Python</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[10]">
+                  <p>The course involved building a series of web applications to retrieve, process and visualise data using python. This involved building a simple version of the Google's Pagerank Algorithm, a Search crawler, etc. </p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">February 2020</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-success">
+              <div class="timeline-badge" (click)="toggleInformal(11)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(11)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Using Databases with Python</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[11]">
+                  <p>This course introduced me to the basics of SQL and database design for storing data as part of a multi-step data gathering, analysis, and processing effort.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">September 2019</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper  timeline-wrapper-info">
+              <div class="timeline-badge" (click)="toggleInformal(12)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(12)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Using Python to access Web Data</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[12]">
+                  <p>This course involved scraping, parsing, and reading web data as well as access data using web APIs.  Primarily, it used HTML, XML, and JSON data formats.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">August 2019</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-info">
+              <div class="timeline-badge" (click)="toggleInformal(13)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(13)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Python Data Structures</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[13]">
+                  <p>This course introduced me to the core data structures in Python. Primarily, it focussed on built-in data structures such as lists, dictionaries, and tuples to perform increasingly complex data analysis.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">August 2019</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="timeline-wrapper  timeline-wrapper-primary">
+              <div class="timeline-badge" (click)="toggleInformal(14)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(14)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Python for Everybody</h6>
+                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[14]">
+                  <p>This course introduced me to the basics of Python. It focussed mostly on Procedural Programming.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold">July 2019</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ************************ -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
