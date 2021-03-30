@@ -1,1 +1,62 @@
-<p>contact works!</p>
+<div class="container mt-5">
+  <div class="container ">
+    <div class="row d-flex justify-content-center">
+      <div class="col-5 middle p-5">
+
+<form (ngSubmit)='onSubmit(f)'  #f='ngForm'>
+
+        <div class="form-group">
+
+        <div class="alert alert-success" role="alert" *ngIf="sent">
+          Form Submitted.
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="error">
+          Some error occurred. Please contact me via aditya.7@Outlook.com
+        </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" id="fname" class="form-control" placeholder="John" #fname='ngModel'  ngModel name="fname" required>
+                <label for="fname">First Name</label>
+                <span *ngIf="fname.invalid && fname.touched" class='help-block'>First Name cannot be empty</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" id="fname" class="form-control"  placeholder="Doe" #lname='ngModel' ngModel name="lname" required >
+                <label for="fname">Last Name</label>
+                <span *ngIf="lname.invalid && lname.touched" class='help-block'>Last Name cannot be empty</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <div class="form-floating">
+            <input type="text" id="email" class="form-control" placeholder="test@test.com" #email='ngModel' ngModel email name="email" required>
+            <label for="email">Email</label>
+            <span *ngIf="email.invalid && email.touched" class='help-block'>Email not valid</span>
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="comments" #comments='ngModel' ngModel required name="comments" style="height: 100px">
+          </textarea>
+          <label for="comments">Comments</label>
+          <span *ngIf="comments.invalid && comments.touched" class='help-block'>Comments cannot be empty</span>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-4">
+            <button type="submit" class="btn btn-primary " [disabled]='!f.valid'>
+              Submit Form
+            </button>
+          </div>
+        </div>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>

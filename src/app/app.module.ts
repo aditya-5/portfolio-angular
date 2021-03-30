@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
+import {FormsModule} from "@angular/forms"
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
 {path:'home', component:HomepageComponent},
@@ -26,7 +28,9 @@ const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

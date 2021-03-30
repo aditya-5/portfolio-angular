@@ -1,0 +1,16 @@
+.middle{
+  border:2px solid black;
+  border-radius: 10px;
+}
+
+input.ng-invalid.ng-touched{
+  border:1px red solid;
+}
+textarea.ng-invalid.ng-touched{
+  border:1px red solid;
+}
+
+.help-block{
+  color:red;
+  font-size:0.8em;
+}
