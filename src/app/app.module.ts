@@ -10,11 +10,13 @@ import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http";
+import { ProjectsComponent } from './projects/projects.component';
 
 const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
 {path:'home', component:HomepageComponent},
 {path:'education', component:EducationComponent},
-{path:'contact', component:ContactComponent}
+{path:'contact', component:ContactComponent},
+{path:'projects', component:ProjectsComponent}
                           ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
     HeaderComponent,
     HomepageComponent,
     EducationComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
