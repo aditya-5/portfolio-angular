@@ -23,7 +23,7 @@
                     <h6 class="timeline-title">University of Manchester</h6>
                     <p class="place"> Manchester, England</p>
                   </div>
-                  <div class="timeline-body" *ngIf="MANC">
+                  <div class="timeline-body" *ngIf="MANC" @slideInOut>
                     <p>Artificial Intelligence with Industrial Experience</p>
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -41,7 +41,7 @@
                     <h6 class="timeline-title">Indian Institute of Technology</h6>
                     <p class="place"> Kanpur, India</p>
                   </div>
-                  <div class="timeline-body" *ngIf="IIT">
+                  <div class="timeline-body" *ngIf="IIT" @slideInOut>
                     <p>French Language Programme - Level 1</p>
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -60,7 +60,7 @@
                     <h6 class="timeline-title">Delhi Public School</h6>
                     <p class="place"> Kanpur, India</p>
                   </div>
-                  <div class="timeline-body" *ngIf="DPS">
+                  <div class="timeline-body" *ngIf="DPS" @slideInOut>
                     <p><b>AISSCE (CBSE):</b> Physics, Mathematics, Chemistry, English, Web Technology, Physical Education, PHealth Education, General Studies and Work Experience</p>
                     <p><b>AISSE (CBSE): </b>English, Mathematics, Science, Social Science and Hindi</p>
                   </div>
@@ -95,7 +95,7 @@
                   <h6 class="timeline-title">Flutter & Dart - The Complete Guide</h6>
                   <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[0]">
+                <div class="timeline-body" *ngIf="informalList[0]"  @slideInOut>
                   <p>I am learning to develop native iOS and Android apps using Flutter SDK and Flutter framework under this course.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -116,7 +116,7 @@
                   <h6 class="timeline-title">Angular: The Complete Guide</h6>
                   <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[1]">
+                <div class="timeline-body" *ngIf="informalList[1]"  @slideInOut>
                   <p>The course taught me to create reactive, single-page web applications using Google's Angular Framework (successor of AngularJS)</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -135,7 +135,7 @@
                   <h6 class="timeline-title">Photography Masterclass</h6>
                   <p class="place"> <b>Video School Online</b> : Phil Ebiner and William Carnahan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[2]">
+                <div class="timeline-body" *ngIf="informalList[2]"  @slideInOut >
                   <p>This course introduced me to the recondite workings of a camera. It also covered the various types of lighting scenarios and photography composition rules.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -156,7 +156,7 @@
                   <h6 class="timeline-title">Web Development Bootcamp</h6>
                   <p class="place"> <b>Udemy</b> : Colt Steele</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[3]">
+                <div class="timeline-body" *ngIf="informalList[3]"  @slideInOut>
                   <p>This course covered the ins and outs of the HTML, CSS and modern JavaScript. It taught to me create fully functional websites using nodeJS, mongoDB, CSS and HTML. In terms of frameworks and libraries,
                      I learnt jQuery and BootStrap. Additionally, I learnt to deal with APIs using Ajax requests.</p>
                 </div>
@@ -178,7 +178,7 @@
                   <h6 class="timeline-title">Adobe Photoshop CC</h6>
                   <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[4]">
+                <div class="timeline-body" *ngIf="informalList[4]"  @slideInOut>
                   <p>The course taught me the essential tools of Adobe Photoshop CC. Subsequently, I gained the skills to design beautiful graphics and photos in Photoshop.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -194,7 +194,7 @@
                   <h6 class="timeline-title">After Effects CC Masterclass</h6>
                   <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[5]">
+                <div class="timeline-body" *ngIf="informalList[5]"  @slideInOut>
                   <p>The course taught me the essential tools of Adobe AE and subsequently, how to improve videos with professional motion graphics and visual effects. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -211,7 +211,7 @@
                   <h6 class="timeline-title">Adobe Premiere Pro CS6</h6>
                   <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[6]">
+                <div class="timeline-body" *ngIf="informalList[6]"  @slideInOut>
                   <p>The course taught me the fundamentals of video editing. During the course, I edited a few documentaries to gain real world experience.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -231,7 +231,7 @@
                   <h6 class="timeline-title">Learn Ethical Hacking From Scratch</h6>
                   <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[7]">
+                <div class="timeline-body" *ngIf="informalList[7]"  @slideInOut>
                   <p>The course covered a lot of areas under ethical hacking. These included hacking WiFi & wired networks, exploiting websites using their vulnerabilities (XSS and SQL injections), phishing, MITM attacks, creating payloads, android hacking, linux basics, spoofing techniques, keeping systems malware free, etc. Additionally, I learnt the basics of more than 30 hacking tools as part of this course.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -248,7 +248,7 @@
                   <h6 class="timeline-title">Learn Social Engineering From Scratch</h6>
                   <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[8]">
+                <div class="timeline-body" *ngIf="informalList[8]"  @slideInOut>
                   <p>As part of this course, I learnt how to exploit systems by targeting people using them instead of the systems themselves. I learnt how to maintain persistence access to android, OSX, Linux and Windows systems. I also gained skills to extract saved as well as to-be-entered passwords out of a system by using remote keyloggers. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -268,7 +268,7 @@
                   <h6 class="timeline-title">Python for Everybody Specialization</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[9]">
+                <div class="timeline-body" *ngIf="informalList[9]"  @slideInOut>
                   <p>The Python Specialization was a combination of the five sub-courses listed below. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -284,7 +284,7 @@
                   <h6 class="timeline-title">Capstone: Retrieving, Processing, and Visualizing Data with Python</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[10]">
+                <div class="timeline-body" *ngIf="informalList[10]"  @slideInOut>
                   <p>The course involved building a series of web applications to retrieve, process and visualise data using python. This involved building a simple version of the Google's Pagerank Algorithm, a Search crawler, etc. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -301,7 +301,7 @@
                   <h6 class="timeline-title">Using Databases with Python</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[11]">
+                <div class="timeline-body" *ngIf="informalList[11]"  @slideInOut>
                   <p>This course introduced me to the basics of SQL and database design for storing data as part of a multi-step data gathering, analysis, and processing effort.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -317,7 +317,7 @@
                   <h6 class="timeline-title">Using Python to access Web Data</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[12]">
+                <div class="timeline-body" *ngIf="informalList[12]"  @slideInOut>
                   <p>This course involved scraping, parsing, and reading web data as well as access data using web APIs.  Primarily, it used HTML, XML, and JSON data formats.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -335,7 +335,7 @@
                   <h6 class="timeline-title">Python Data Structures</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[13]">
+                <div class="timeline-body" *ngIf="informalList[13]"  @slideInOut>
                   <p>This course introduced me to the core data structures in Python. Primarily, it focussed on built-in data structures such as lists, dictionaries, and tuples to perform increasingly complex data analysis.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
@@ -352,7 +352,7 @@
                   <h6 class="timeline-title">Python for Everybody</h6>
                   <p class="place"> <b>Coursera</b> : University of Michigan</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[14]">
+                <div class="timeline-body" *ngIf="informalList[14]"  @slideInOut>
                   <p>This course introduced me to the basics of Python. It focussed mostly on Procedural Programming.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
