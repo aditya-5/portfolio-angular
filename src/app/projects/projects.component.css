@@ -148,3 +148,28 @@ h3 {
   transition: all .3s ease-in-out;
   /* transform: scale(0.9); */
 }
+
+@media (max-width: 576px) {
+
+  .vtimeline-content {
+      margin: 15px;
+      padding: 35px 20px;
+      text-align: left;
+
+  }
+
+  .post-meta{
+    font-size:0.7em
+  }
+
+  .vtimeline-icon{
+    transform: scale(0.6);
+  }
+
+
+  .vtimeline-date{
+    
+  }
+
+
+}
