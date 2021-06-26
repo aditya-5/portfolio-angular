@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  private cont: string[] = ["a Express","Angular"," JavaScript!"];
+  private cont: string[] = ["Namaste","Hello","Bună ziua","Hola","Nǐ hǎo"
+                            ,"Zdraveite","Bonjour","Guten tag","Salve","Salam",
+                            "Marhaba"];
   content: string;
   private index: number = 0;
   private count: number = 0;
