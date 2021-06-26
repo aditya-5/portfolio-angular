@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="container ">
     <div class="row d-flex justify-content-center">
-      <div class="col-5 middle p-5">
+      <div class="col-lg-5 middle p-5 col-sm-8">
 
 <form (ngSubmit)='onSubmit(f)'  #f='ngForm'>
 
@@ -11,7 +11,10 @@
           Form Submitted.
         </div>
         <div class="alert alert-danger" role="alert" *ngIf="error">
-          Some error occurred. Please contact me via aditya.7@Outlook.com
+          Some error occurred.
+        </div>
+        <div class="alert alert-info" role="alert" *ngIf="error">
+          Please contact me via aditya.7@Outlook.com
         </div>
 
           <div class="row mb-3">
@@ -48,10 +51,11 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <button type="submit" class="btn btn-primary " [disabled]='!f.valid'>
               Submit Form
             </button>
+
           </div>
         </div>
 </form>
