@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
-import { EducationDescComponent} from "../education-desc/education-desc.component"
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
