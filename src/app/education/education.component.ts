@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
-
+import { EducationDescComponent} from "../education-desc/education-desc.component"
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
@@ -26,10 +26,19 @@ export class EducationComponent implements OnInit {
   formalBool: boolean= true;
   informalList: boolean[] = new Array();
 
+  uomYears: boolean[] = new Array();
+
   constructor() {
       for(let i=0;i<=this.informalList.length-1;i++){
     this.informalList[i] = false;
     }
+
+    for(let i=0; i<= this.uomYears.length-1;i++){
+      this.uomYears[i] = false;
+    }
+
+    this.uomYears[0] = true;
+
 }
 
   ngOnInit(): void {
@@ -80,6 +89,13 @@ export class EducationComponent implements OnInit {
 
   toggleInformal(x:Number){
     this.informalList[+x] = !this.informalList[+x];
+  }
+
+  toggleuomYears(x:Number){
+    for(let i=0;i<=this.uomYears.length-1;i++){
+      this.uomYears[i] = false;
+    }
+    this.uomYears[+x] = !this.uomYears[+x]
   }
 
 

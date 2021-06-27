@@ -25,6 +25,13 @@ background:#eee;
   color: red
 }
 
+.sub-btn{
+  margin:4px
+}
+
+.list-sm{
+  font-size:0.8em
+}
 
 /* Timeline */
 .timeline {

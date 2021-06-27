@@ -1,3 +1,5 @@
+<app-education-desc></app-education-desc>
+
 
 <div class="row mt-4 m-4 justify-content-md-center">
     <div class="col-lg-2">
@@ -23,8 +25,36 @@
                     <h6 class="timeline-title">University of Manchester</h6>
                     <p class="place"> Manchester, England</p>
                   </div>
-                  <div class="timeline-body" *ngIf="MANC" @slideInOut>
+                  <div class="timeline-body mb-4" *ngIf="MANC" @slideInOut>
                     <p>Artificial Intelligence with Industrial Experience</p>
+
+                    <div class="d-flex  mb-3">
+                      <button type="button" class="btn btn-sm sub-btn" [ngClass]="{'btn-danger':uomYears[0]}" onclick="event.stopPropagation();" (click)="toggleuomYears(0)">1st Year</button>
+                      <button type="button" class="btn btn-sm sub-btn" [ngClass]="{'btn-danger':uomYears[1]}" onclick="event.stopPropagation();" (click)="toggleuomYears(1)">2nd Year</button>
+                      <button type="button" class="btn btn-sm sub-btn" [ngClass]="{'btn-danger':uomYears[2]}" onclick="event.stopPropagation();" (click)="toggleuomYears(2)">3rd Year</button>
+                      <button type="button" class="btn btn-sm sub-btn" [ngClass]="{'btn-danger':uomYears[3]}" onclick="event.stopPropagation();" (click)="toggleuomYears(3)">4th Year</button>
+                  </div>
+                  <div class="list-sm">
+                    <div *ngIf="uomYears[0]">
+                      <ul >
+                        <li>COMP10120 First Year Web Dev Team Project </li>
+                        <li>COMP11120 Mathematical Techniques for Computer Science</li>
+                        <li>COMP11212 Fundamentals of Computation</li>
+                        <li>COMP12111 Fundamentals of Computer Engineering</li>
+                        <li>COMP13212 Data Science </li>
+                        <li>COMP15111 Fundamentals of Computer Architecture</li>
+                        <li>COMP15212 Operating Systems</li>
+                        <li>COMP16321 Introduction to Programming 1 (Python)</li>
+                        <li>COMP16412 Introduction to Programming 2 (Java)</li>
+                      </ul>
+                    </div>
+                    <p *ngIf="uomYears[1]">Yet to come - 2021-22</p>
+                    <p *ngIf="uomYears[2]">Yet to come - 2022-23</p>
+                    <p *ngIf="uomYears[3]">Yet to come - 2023-24</p>
+                  </div>
+
+
+
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
                       <span class="ml-md-auto font-weight-bold red">Expected 2024</span>
@@ -61,6 +91,9 @@
                     <p class="place"> Kanpur, India</p>
                   </div>
                   <div class="timeline-body" *ngIf="DPS" @slideInOut>
+
+
+
                     <p><b>AISSCE (CBSE):</b> Physics, Mathematics, Chemistry, English, Web Technology, Physical Education, PHealth Education, General Studies and Work Experience</p>
                     <p><b>AISSE (CBSE): </b>English, Mathematics, Science, Social Science and Hindi</p>
                   </div>
@@ -92,11 +125,14 @@
               <div class="timeline-badge" (click)="toggleInformal(0)"></div>
               <div class="timeline-panel" (click)="toggleInformal(0)">
                 <div class="timeline-heading">
-                  <h6 class="timeline-title">Flutter & Dart - The Complete Guide</h6>
-                  <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
+                  <h6 class="timeline-title">AWS Certified Solutions Architect Associate Guide</h6>
+                  <p class="place"> <b>Udemy</b> : Stephane Maarek</p>
                 </div>
                 <div class="timeline-body" *ngIf="informalList[0]"  @slideInOut>
-                  <p>I am learning to develop native iOS and Android apps using Flutter SDK and Flutter framework under this course.</p>
+                  <p>I am learning the fundamentals of Amazon Web Services as part of this course.
+                    This includes IAM, EC2, Load Balancing, Auto Scaling, EBS, EFS, Route 53, RDS,
+                    ElastiCache, S3 and CloudFront. Additionally, I am also gaining knowledge about
+                  AWS Integration, AWS Serverless, AWS Networking, etc. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
                     <span class="ml-md-auto font-weight-bold red">Ongoing</span>

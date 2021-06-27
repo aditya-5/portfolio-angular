@@ -12,6 +12,7 @@ import {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http";
 import { ProjectsComponent } from './projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EducationDescComponent } from './education-desc/education-desc.component';
 
 const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
 {path:'home', component:HomepageComponent},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
     HomepageComponent,
     EducationComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    EducationDescComponent
   ],
   imports: [
     BrowserModule,
