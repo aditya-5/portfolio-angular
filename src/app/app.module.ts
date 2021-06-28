@@ -12,12 +12,14 @@ import {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http";
 import { ProjectsComponent } from './projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExperienceComponent } from './experience/experience.component';
 
 const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
 {path:'home', component:HomepageComponent},
 {path:'education', component:EducationComponent},
 {path:'contact', component:ContactComponent},
-{path:'projects', component:ProjectsComponent}
+{path:'projects', component:ProjectsComponent},
+{path:'experience', component:ExperienceComponent}
                           ];
 
 @NgModule({
@@ -28,6 +30,7 @@ const appRoutes: Routes = [{path:'', redirectTo: '/home', pathMatch:'full'},
     EducationComponent,
     ContactComponent,
     ProjectsComponent,
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
