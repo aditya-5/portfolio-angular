@@ -18,19 +18,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
 
       <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active linkCol"  routerLink="/home">Homepage</a>
+        <li class="nav-item" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">
+          <a class="nav-link linkCol"  routerLink="/home">Homepage</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">
           <a class="nav-link linkCol" routerLink="/projects">Projects</a>
         </li>
-        <li class="nav-item" style="margin:0px">
+        <li class="nav-item" style="margin:0px" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">
           <a class="nav-link linkCol" routerLink="/contact">Contact</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">
           <a class="nav-link linkCol" routerLink="/education">Education</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">
           <a class="nav-link linkCol" routerLink="/experience">Experience</a>
         </li>
       </ul>
