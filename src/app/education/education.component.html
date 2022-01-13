@@ -57,7 +57,20 @@
                         <li>COMP16412 Introduction to Programming 2 (Java)</li>
                       </ul>
                     </div>
-                    <p *ngIf="uomYears[1]">Yet to come - 2021-22</p>
+                    <div *ngIf="uomYears[1]">
+                      <ul >
+                        <li>COMP22111 Processor Microarchitecture</li>
+                        <li>COMP23111 Database Systems</li>
+                        <li>COMP23311 Software Engineering 1 & 2</li>
+                        <li>COMP24011 Introduction to Artificial Intelligence</li>
+                        <li>COMP26020 Programming Languages & Paradigms</li>
+                        <li>COMP26120 Algorithms and Data Structures</li>
+                        <li>COMP24112 Machine Learning</li>
+                        <li>COMP24412 Knowledge Based AI</li>
+                        <li>COMP22111 Processor Microarchitecture</li>
+                        <li>COMP22712 Microcontrollers</li>
+                      </ul>
+                    </div>
                     <p *ngIf="uomYears[2]">Yet to come - 2022-23</p>
                     <p *ngIf="uomYears[3]">Yet to come - 2023-24</p>
                   </div>
@@ -126,9 +139,29 @@
         <div class="mt-5">
           <div class="timeline">
 
+            <!-- ************************ -->
+            <!-- Discord Bot -->
+
+            <div class="timeline-wrapper timeline-inverted timeline-wrapper-warning">
+              <div class="timeline-badge" (click)="toggleInformal(15)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(15)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Create the Best Discord Bot with Node.js
+                  </h6>
+                  <p class="place"> <b>Udemy</b> : Adam Jr.</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[15]"  @slideInOut>
+                  <p>Learning to create a simple discord bot along with a dashboard of its own.</p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold red">Ongoing</span>
+                </div>
+              </div>
+            </div>
+
 
             <!-- ************************ -->
-            <!-- Flutter -->
+            <!-- AWS -->
 
             <div class="timeline-wrapper timeline-wrapper-warning">
               <div class="timeline-badge" (click)="toggleInformal(0)"></div>
@@ -144,7 +177,6 @@
                   AWS Integration, AWS Serverless, AWS Networking, etc. </p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold red">Ongoing</span>
                 </div>
               </div>
             </div>
