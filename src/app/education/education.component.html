@@ -35,7 +35,7 @@
 
                   </div>
                   <div class="timeline-body mb-4" *ngIf="MANC" @slideInOut>
-                    <p>Artificial Intelligence with Industrial Experience</p>
+                    <p>Computer Science with Industrial Experience</p>
 
                     <div class="d-flex  mb-3">
                       <button type="button" class="btn btn-sm sub-btn" [ngClass]="{'btn-danger':uomYears[0]}" onclick="event.stopPropagation();" (click)="toggleuomYears(0)">1st Year</button>
@@ -56,6 +56,9 @@
                         <li>COMP16321 Introduction to Programming 1 (Python)</li>
                         <li>COMP16412 Introduction to Programming 2 (Java)</li>
                       </ul>
+                      <br>
+                      Netcraft Prize : Awarded to the 10 students with the highest Year 1 overall mark
+                      <img style="height:40px;width:40px" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1658648954/ribbon_g8lupo.png" alt="">
                     </div>
                     <div *ngIf="uomYears[1]">
                       <ul >
@@ -66,12 +69,11 @@
                         <li>COMP26020 Programming Languages & Paradigms</li>
                         <li>COMP26120 Algorithms and Data Structures</li>
                         <li>COMP24112 Machine Learning</li>
-                        <li>COMP24412 Knowledge Based AI</li>
-                        <li>COMP22111 Processor Microarchitecture</li>
-                        <li>COMP22712 Microcontrollers</li>
+                        <li>COMP28112 Distributed Systems</li>
+                        <li>COMP27112 Visual Computing</li>
                       </ul>
                     </div>
-                    <p *ngIf="uomYears[2]">Yet to come - 2022-23</p>
+                    <p *ngIf="uomYears[2]">Industrial Experience Year</p>
                     <p *ngIf="uomYears[3]">Yet to come - 2023-24</p>
                   </div>
 
@@ -154,7 +156,7 @@
                   <p>Learning to create a simple discord bot along with a dashboard of its own.</p>
                 </div>
                 <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold red">Ongoing</span>
+                    <!-- <span class="ml-md-auto font-weight-bold red">Ongoing</span> -->
                 </div>
               </div>
             </div>

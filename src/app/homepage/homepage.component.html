@@ -4,11 +4,16 @@
 
       <div class="d-flex justify-content-center bg-secondary text-light">
       <h1> &nbsp; {{content}}</h1>
+      </div>
 
-      </div>
       <div class="d-flex justify-content-center mt-3">
-      <span class="badge bg-warning">Homepage under construction</span>
+      <span class="badge bg-warning">Homepage under construction since forever</span>
       </div>
+
+      <div class="d-flex justify-content-center mt-3" *ngIf="constructionTimerr">
+        <span class="badge bg-info">Developer sleeping since the past {{constructionTimerr}}</span>
+        </div>
+      
     </div>
   </div>
 </div>
