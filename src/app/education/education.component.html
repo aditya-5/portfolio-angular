@@ -73,7 +73,7 @@
                         <li>COMP27112 Visual Computing</li>
                       </ul>
                     </div>
-                    <p *ngIf="uomYears[2]">Industrial Experience Year</p>
+                    <p *ngIf="uomYears[2]">Industrial Experience at MFT National Health Service (NHS) </p>
                     <p *ngIf="uomYears[3]">Yet to come - 2023-24</p>
                   </div>
 
@@ -140,6 +140,26 @@
       <div class="card-body">
         <div class="mt-5">
           <div class="timeline">
+
+
+            <!-- ************************ -->
+            <!-- ML -->
+
+            <div class="timeline-wrapper timeline-wrapper-warning">
+              <div class="timeline-badge" (click)="toggleInformal(0)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(0)">
+                <div class="timeline-heading">
+                  <h6 class="timeline-title">Machine Learning using Python</h6>
+                  <p class="place"> <b>Udemy</b> : Kirill Eremenko & Hadelin de Ponteves</p>
+                </div>
+                <div class="timeline-body" *ngIf="informalList[0]"  @slideInOut>
+                  <p>Learning data-preprocessing (encoding categorical data, missing data, etc.), regression models (linear, polynomial, SVR, decision tree, decision forest), classification models, Reinforcement Learning, NLP and Deep Learning, etc. </p>
+                </div>
+                <div class="timeline-footer d-flex align-items-center flex-wrap">
+                    <span class="ml-md-auto font-weight-bold red">In progress (Last updated: April, 2023)</span>
+                </div>
+              </div>
+            </div>
 
             <!-- ************************ -->
             <!-- Discord Bot -->

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  experienceType: boolean[] = [true, false, false];
+  experienceType: boolean[] = [false, true, false];
 
 
   constructor() { }
