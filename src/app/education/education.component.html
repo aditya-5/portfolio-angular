@@ -73,15 +73,24 @@
                         <li>COMP27112 Visual Computing</li>
                       </ul>
                     </div>
-                    <p *ngIf="uomYears[2]">Industrial Experience at MFT National Health Service (NHS) </p>
-                    <p *ngIf="uomYears[3]">Yet to come - 2023-24</p>
+                    <p *ngIf="uomYears[2]">Industrial Experience at MFT National Health Service (NHS), Manchester, UK </p>
+                    <div *ngIf="uomYears[3]">
+                      <ul>
+                        <li>COMP30040 Agile Software Pipelines</li>
+                        <li>COMP33312 User Experience</li>
+                        <li>COMP33511 AI and Games</li>
+                        <li>COMP34111 Cognitive Robotics</li>
+                        <li>COMP34212 Natural Language Processing</li>
+                        <li>COMP34711 Natural Language Understanding</li>
+                        <li>COMP34812 Advanced Distributed Systems</li>
+                        <li>COMP38311 Managing Finance in Enterprise</li>
+                      </ul>
+                    </div>
+
                   </div>
-
-
-
                   </div>
                   <div class="timeline-footer d-flex align-items-center flex-wrap">
-                      <span class="ml-md-auto font-weight-bold red">Expected 2024</span>
+                      <span class="ml-md-auto font-weight-bold">Graduated July 2024</span>
                   </div>
                 </div>
               </div>
@@ -126,6 +135,9 @@
                   </div>
                 </div>
               </div>
+
+
+
             </div>
           </div>
         </div>
@@ -142,326 +154,19 @@
           <div class="timeline">
 
 
-            <!-- ************************ -->
-            <!-- ML -->
-
-            <div class="timeline-wrapper timeline-wrapper-warning">
-              <div class="timeline-badge" (click)="toggleInformal(0)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(0)">
+            <div *ngFor="let item of informalItems; let i = index" [ngClass]="item.wrapperClass">
+              <div class="timeline-badge" (click)="toggleInformal(item.toggleIndex)"></div>
+              <div class="timeline-panel" (click)="toggleInformal(item.toggleIndex)">
                 <div class="timeline-heading">
-                  <h6 class="timeline-title">Machine Learning using Python</h6>
-                  <p class="place"> <b>Udemy</b> : Kirill Eremenko & Hadelin de Ponteves</p>
+                  <h6 class="timeline-title">{{ item.title }}</h6>
+                  <p class="place"> <b>{{ item.place }}</b> : {{ item.instructors }}</p>
                 </div>
-                <div class="timeline-body" *ngIf="informalList[0]"  @slideInOut>
-                  <p>Learning data-preprocessing (encoding categorical data, missing data, etc.), regression models (linear, polynomial, SVR, decision tree, decision forest), classification models, Reinforcement Learning, NLP and Deep Learning, etc. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold red">In progress (Last updated: April, 2023)</span>
+                <div class="timeline-body" *ngIf="informalList[item.toggleIndex]" @slideInOut>
+                  <!-- <p>{{ item.body }}</p> -->
+                  <div [innerHTML]="item.body"></div>
                 </div>
               </div>
             </div>
-
-            <!-- ************************ -->
-            <!-- Discord Bot -->
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-warning">
-              <div class="timeline-badge" (click)="toggleInformal(15)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(15)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Create the Best Discord Bot with Node.js
-                  </h6>
-                  <p class="place"> <b>Udemy</b> : Adam Jr.</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[15]"  @slideInOut>
-                  <p>Learning to create a simple discord bot along with a dashboard of its own.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <!-- <span class="ml-md-auto font-weight-bold red">Ongoing</span> -->
-                </div>
-              </div>
-            </div>
-
-
-            <!-- ************************ -->
-            <!-- AWS -->
-
-            <div class="timeline-wrapper timeline-wrapper-warning">
-              <div class="timeline-badge" (click)="toggleInformal(0)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(0)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">AWS Certified Solutions Architect Associate Guide</h6>
-                  <p class="place"> <b>Udemy</b> : Stephane Maarek</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[0]"  @slideInOut>
-                  <p>I am learning the fundamentals of Amazon Web Services as part of this course.
-                    This includes IAM, EC2, Load Balancing, Auto Scaling, EBS, EFS, Route 53, RDS,
-                    ElastiCache, S3 and CloudFront. Additionally, I am also gaining knowledge about
-                  AWS Integration, AWS Serverless, AWS Networking, etc. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                </div>
-              </div>
-            </div>
-
-
-
-            <!-- ************************ -->
-            <!-- Angular -->
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-success">
-              <div class="timeline-badge" (click)="toggleInformal(1)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(1)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Angular: The Complete Guide</h6>
-                  <p class="place"> <b>Academind</b> : Max Schwarzmüller</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[1]"  @slideInOut>
-                  <p>The course taught me to create reactive, single-page web applications using Google's Angular Framework (successor of AngularJS)</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">February 2021</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- ************************ -->
-            <!-- Photography -->
-
-            <div class="timeline-wrapper timeline-wrapper-info">
-              <div class="timeline-badge" (click)="toggleInformal(2)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(2)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Photography Masterclass</h6>
-                  <p class="place"> <b>Video School Online</b> : Phil Ebiner and William Carnahan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[2]"  @slideInOut >
-                  <p>This course introduced me to the recondite workings of a camera. It also covered the various types of lighting scenarios and photography composition rules.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">February 2021</span>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- ************************ -->
-            <!-- Web Development -->
-
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-primary">
-              <div class="timeline-badge" (click)="toggleInformal(3)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(3)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Web Development Bootcamp</h6>
-                  <p class="place"> <b>Udemy</b> : Colt Steele</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[3]"  @slideInOut>
-                  <p>This course covered the ins and outs of the HTML, CSS and modern JavaScript. It taught to me create fully functional websites using nodeJS, mongoDB, CSS and HTML. In terms of frameworks and libraries,
-                     I learnt jQuery and BootStrap. Additionally, I learnt to deal with APIs using Ajax requests.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">June 2020</span>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- ************************ -->
-            <!-- DESIGNING -->
-
-
-            <div class="timeline-wrapper timeline-wrapper-warning">
-              <div class="timeline-badge" (click)="toggleInformal(4)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(4)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Adobe Photoshop CC</h6>
-                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[4]"  @slideInOut>
-                  <p>The course taught me the essential tools of Adobe Photoshop CC. Subsequently, I gained the skills to design beautiful graphics and photos in Photoshop.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">May 2020</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-danger">
-              <div class="timeline-badge" (click)="toggleInformal(5)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(5)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">After Effects CC Masterclass</h6>
-                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[5]"  @slideInOut>
-                  <p>The course taught me the essential tools of Adobe AE and subsequently, how to improve videos with professional motion graphics and visual effects. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">May 2020</span>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="timeline-wrapper timeline-wrapper-success">
-              <div class="timeline-badge" (click)="toggleInformal(6)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(6)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Adobe Premiere Pro CS6</h6>
-                  <p class="place"> <b>Video School Online</b> : Phil Ebiner</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[6]"  @slideInOut>
-                  <p>The course taught me the fundamentals of video editing. During the course, I edited a few documentaries to gain real world experience.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">May 2020</span>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- ************************ -->
-            <!-- ZSECURITY -->
-
-            <div class="timeline-wrapper  timeline-inverted timeline-wrapper-info">
-              <div class="timeline-badge" (click)="toggleInformal(7)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(7)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Learn Ethical Hacking From Scratch</h6>
-                  <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[7]"  @slideInOut>
-                  <p>The course covered a lot of areas under ethical hacking. These included hacking WiFi & wired networks, exploiting websites using their vulnerabilities (XSS and SQL injections), phishing, MITM attacks, creating payloads, android hacking, linux basics, spoofing techniques, keeping systems malware free, etc. Additionally, I learnt the basics of more than 30 hacking tools as part of this course.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">April 2020</span>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="timeline-wrapper timeline-wrapper-primary">
-              <div class="timeline-badge" (click)="toggleInformal(8)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(8)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Learn Social Engineering From Scratch</h6>
-                  <p class="place"> <b>ZSecurity</b> : Zaid Sabih</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[8]"  @slideInOut>
-                  <p>As part of this course, I learnt how to exploit systems by targeting people using them instead of the systems themselves. I learnt how to maintain persistence access to android, OSX, Linux and Windows systems. I also gained skills to extract saved as well as to-be-entered passwords out of a system by using remote keyloggers. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">April 2020</span>
-                </div>
-              </div>
-            </div>
-
-          <!-- ************************ -->
-          <!-- COURSERA PYTHON -->
-
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-warning">
-              <div class="timeline-badge" (click)="toggleInformal(9)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(9)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Python for Everybody Specialization</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[9]"  @slideInOut>
-                  <p>The Python Specialization was a combination of the five sub-courses listed below. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">March 2020</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-wrapper timeline-wrapper-danger">
-              <div class="timeline-badge" (click)="toggleInformal(10)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(10)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Capstone: Retrieving, Processing, and Visualizing Data with Python</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[10]"  @slideInOut>
-                  <p>The course involved building a series of web applications to retrieve, process and visualise data using python. This involved building a simple version of the Google's Pagerank Algorithm, a Search crawler, etc. </p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">February 2020</span>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-success">
-              <div class="timeline-badge" (click)="toggleInformal(11)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(11)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Using Databases with Python</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[11]"  @slideInOut>
-                  <p>This course introduced me to the basics of SQL and database design for storing data as part of a multi-step data gathering, analysis, and processing effort.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">September 2019</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-wrapper  timeline-wrapper-info">
-              <div class="timeline-badge" (click)="toggleInformal(12)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(12)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Using Python to access Web Data</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[12]"  @slideInOut>
-                  <p>This course involved scraping, parsing, and reading web data as well as access data using web APIs.  Primarily, it used HTML, XML, and JSON data formats.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">August 2019</span>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="timeline-wrapper timeline-inverted timeline-wrapper-info">
-              <div class="timeline-badge" (click)="toggleInformal(13)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(13)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Python Data Structures</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[13]"  @slideInOut>
-                  <p>This course introduced me to the core data structures in Python. Primarily, it focussed on built-in data structures such as lists, dictionaries, and tuples to perform increasingly complex data analysis.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">August 2019</span>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="timeline-wrapper  timeline-wrapper-primary">
-              <div class="timeline-badge" (click)="toggleInformal(14)"></div>
-              <div class="timeline-panel" (click)="toggleInformal(14)">
-                <div class="timeline-heading">
-                  <h6 class="timeline-title">Python for Everybody</h6>
-                  <p class="place"> <b>Coursera</b> : University of Michigan</p>
-                </div>
-                <div class="timeline-body" *ngIf="informalList[14]"  @slideInOut>
-                  <p>This course introduced me to the basics of Python. It focussed mostly on Procedural Programming.</p>
-                </div>
-                <div class="timeline-footer d-flex align-items-center flex-wrap">
-                    <span class="ml-md-auto font-weight-bold">July 2019</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- ************************ -->
-
 
           </div>
         </div>
@@ -469,4 +174,7 @@
     </div>
   </div>
 </div>
+
+
+
 </div>

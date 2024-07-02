@@ -1,12 +1,6 @@
 <section class="mb-5" id="resume">
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-lg-6">
-        <div class="section-title">
-          <h2>Experience</h2>
-        </div>
-      </div>
-    </div> -->
+  
       <div class="row mt-4 mb-4 d-flex justify-content-center">
         <div class="col-lg-2">
           <button type="button" class="form-control btn " [ngClass]="{'btn-danger':experienceType[0]}" (click)="changeExpType(0)">Extracurricular</button>
@@ -22,206 +16,23 @@
         <div class="resume-box">
           <ul>
 
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">September 2020 - Present</span>
-                  <h5>Student Representative - University of Manchester (Year 1, 2 and 3 - Computer Science)</h5>
-                  Represented the views of my fellow mates in the UG Forums,
-                  worked closely with the Undergraduate Staff Committee,
-                  regularly collected feedback from students through a variety of channels such as Google Sites, Discord, etc.
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">May 2021 - Present</span>
-                  <h5>Social Media Manager - 9byIWC from IWC Schauffhausen  </h5>
-                  <p>Produced by students and engineered (officially verified) by IWC Schaffhausen, it is an industry-first project between the watch brand and university students. As part of this role, I am working on the team website and producing watch-related content fused with passion points. </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878303/iwc_d48xjs.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">September 2021 - June 2022</span>
-                  <h5> Peer-assisted Study Sessions (PASS) Leader - University of Manchester (Year 2 Computer Science) </h5>
-                  <p>The role calls for me supporting a small group of year one students to develop a self-directed learning approach to their studies. This involves a meeting at regular intervals
-                  to discuss their concerns and future plans.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">September 2021 - May 2022</span>
-                  <h5>Technical and Outreach Teams - Google Student Developer Club</h5>
-                  As part of the club, my role is a blended mix of technical and outreach duties. These involve
-                working on the React front-end design for GDSC's annual Hackathon website,
-                managing social media channels such as Instagram, Facebook, and LinkedIn, 
-                developing creative and engaging social media strategies and
-                maintaining the Discord Server
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1642077855/gdsc_s1rkqz.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">June 2021 - May 2022</span>
-                  <h5>IT Executive - Enactus Manchester </h5>
-                  <p>As part of this role, I am working on the society website and managing the day-to-day IT activities for the society.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624877531/enactus_gdk61e.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">June 2021 - May 2022</span>
-                  <h5>Media Secretary - Dogs Unleashed Society </h5>
-                  <p>The role calls for me to produce creatives for the different types of volunteering activities and events. It also involves managing Public Relations and operational work. </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878103/dogs_gwutlh.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
             
-
-
-
-
-            <li>
+            <li *ngFor="let item of extraCurricularItems">
               <div class="icon">
-                <i class="fas fa-user-graduate"></i>
+                <i class="fas {{ item.iconClass }}"></i>
               </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">May 2021 - September 2021</span>
-                  <h5>Provisional Committee Member - Gaming Society</h5>
-                  <p>Being on the provisional committee, I am working with the existing committee to plan the future events and raise funds for the society.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878352/gaming_hnvmzm.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">April 2021 - May 2022</span>
-                  <h5>Public Relations Officer - Manchester Hindu Society</h5>
-                  <p>The role calls for me to maintain the online presence of the society. This includes creating graphics, maintaining the social media handles, developing the website, etc. </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878417/hindu_ruda76.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">May 2021 - May 2022</span>
-                  <h5>Graphics Officer - Crakchester Society</h5>
-                  <p>The role calls for me to coordinate with the committee members to produce graphics and layouts for the different social media handles. Additionally,
-                  it involves me developing the society website using WebFlow. </p>
-
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878477/crackchester_qwutln.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-            
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">September 2017</span>
-                  <h5>Head Photographer - Panorama 2k17</h5>
-                  Panorama is a national-level event comprising a variety of academic and non-academic sub-events. It is an annual event organized by The Superhouse Group with a budget of £25,000+.
-                  As part of the role, I led the Photographers' Team. Additionally, I captured and compiled the pre/post-event media requirements.
-                  <!-- <ul>
-                    <li id="other-li">led the Photographers' Team.</li>
-                    <li id="other-li">captured and compiled the pre/post-event media requirements.</li>
-                  </ul> -->
-
+              <div class="row">
+                <div class="col-lg-10">
+                  <span class="time">{{ item.time }}</span>
+                  <h5>{{ item.title }}</h5>
+                  <p>{{ item.description }}</p>
                 </div>
                 <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878741/pano_rpihch.jpg"  alt="">
+                  <img [class]="item.imgClass" [src]="item.imgUrl" alt="">
                 </div>
               </div>
-
-
-
             </li>
+
           </ul>
         </div>
       </div>
@@ -229,220 +40,30 @@
 <!-- ************************************************************
 ************************************************************ -->
 
-
       <div class="col-lg-12 m-15px-tb" *ngIf="experienceType[1]">
         <div class="resume-box">
           <ul>
 
-            <li>
+            <li *ngFor="let item of workItems">
               <div class="icon">
-                <i class="fas fa-briefcase"></i>
+                <i class="fas {{ item.iconClass }}"></i>
               </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">August 2022 - Present</span>
-                  <h5>RPA IT Placement Developer - MFT National Health Service (NHS), Manchester, UK</h5>
-                  <p>
-                    Building automation solutions, updating Intranet site, supporting development of small databases, data analysis, etc. within the finance department.
-                  </p>
+              <div class="row">
+                <div class="col-lg-10">
+                  <span class="time">{{ item.time }}</span>
+                  <h5>{{ item.title }}</h5>
+                  <p>{{ item.description }}</p>
                 </div>
                 <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1681503949/MFT_ihnryx.png"  alt="">
+                  <img [class]="item.imgClass" [src]="item.imgUrl" alt="">
                 </div>
               </div>
             </li>
 
 
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">August 2022 - Present</span>
-                  <h5>Brand Ambassador - RMP Enterprise, London, UK</h5>
-                  <p>
-                    Representing and enhancing outreach via digital promotions and in-person activities for Lidl, NHS, Vodafone, Skiddle, PoliceNow, As-One, Unilever, Ocado, AlphaSights, CMS-Law, RateMyPlacement, Enterprise and Clyde & Co
-                  </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1681503809/1556610306328_tm1pez.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">July 2022 - August 2022</span>
-                  <h5>Software Engineering Intern - The University of Manchester, Manchester, UK</h5>
-                  <p>
-                    Built a fact verification system mimicking the work of fact verification journalists by
-                  adapting an existing ML model for production environments in the form of a Web API and a SPA (Single Page Application). Additionally, fine tuned the model through information retrieval and selection from a huge corpus of data using Elastic Search and BeautifulSoup Library.
-                  </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-            
-
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">June 2021 - July 2022</span>
-                  <h5>Software Developer - Ocean82, UK</h5>
-                  <p>
-                    As part of the summer internship, I enhanced and deployed a Judging Tool for use by the judges in the World Communication Awards held in London on 27th October 2021 and
-                    assisted the judges in solving technical difficulties
-                  </p>
-                  <p>
-                    My part time role as a software developer includes  -
-                    implementing a novel idea into a web-based game planned for launch in the B2B and consumer market and
-                    maintaining and improving the AWS Server Infrastructure
-                  </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1681504094/Ocean82_xlnpja.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">October 2021 - Present</span>
-                  <h5>Web Developer - ProjectUp, Delhi, India</h5>
-                  <p>The role involves developing and enhancing two WordPress websites (ProjectUp.in and IJPSL.in), 
-                    researching the best SEO strategy for the websites, and managing Domain and Email hosting for the team.
-                  </p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1642077163/Project-uP-original-logo-_3-150x150_vrorkq.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">July 2021</span>
-                  <h5>Technology Insight Intern - Discover</h5>
-                  <p>-</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624880131/discover_gh6sgm.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">May 2021</span>
-                  <h5>Insight Intern - BlackRock, London, England</h5>
-                  <p>Gained a deep understanding of the investing world, specifically, the Exchange Traded Funds (ETFs). Additionally, I also got introduced to the Aladdin platform by Blackrock.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624879544/blackrock_g8gnyb.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">April 2021</span>
-                  <h5>Technology Spring Insight Intern - The Hut Group, Manchester, England</h5>
-                  Learnt how technology is involved in every sector,
-                  gained a deep insight into the culture and work environment at THG,
-                  worked on a group coding challenge,
-                  networked with experienced professionals and mentors.
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624879968/thg_xzognb.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">April 2021</span>
-                  <h5>Technology Insight Intern - Optiver, Amsterdam, Netherlands</h5>
-                  Explored the world of algorithmic trading, Gained interesting knowledge and facts about intraday-trading,
-                  worked on a simulated Python Algo-Trade in a team (ranked #4/ 23 teams),
-                  networked with experienced software engineers and market traders
-
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-extra" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624879544/optiver_hhpk1g.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">August 2019 - October 2019</span>
-                  <h5>Campus Ambassador - Alkymia Tech, France</h5>
-                  The role called for me to conduct market research. I was supposed to run campaigns to onboard users onto the smart browser app PopShot, which has now evolved into WebChat. Supplementally, I had to report structured feedback and methods for improving digital reach every week. I was able to bag the Star Performer title at the end of the internship.
-
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624883244/popshot_xcgnxz.png"  alt="">
-                </div>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
-
-
-
-
-
-
-
 
 <!-- ************************************************************
 ************************************************************ -->
@@ -451,70 +72,25 @@
         <div class="resume-box">
           <ul>
 
-
-            <li>
+            <li *ngFor="let item of volunteerItems">
               <div class="icon">
-                <i class="fas fa-briefcase"></i>
+                <i class="fas {{ item.iconClass }}"></i>
               </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">October 2021 - June 2022</span>
-                  <h5>Peer Buddy Scheme Mentor - The University of Manchester, Manchester, UK</h5>
-                  <p>The role calls for me to acting as a friendly ear to 3 students/week, listen to their concerns and signpost them to the right services, should they need them.</p>
+              <div class="row">
+                <div class="col-lg-10">
+                  <span class="time">{{ item.time }}</span>
+                  <h5>{{ item.title }}</h5>
+                  <p>{{ item.description }}</p>
                 </div>
                 <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png"  alt="">
+                  <img [class]="item.imgClass" [src]="item.imgUrl" alt="">
                 </div>
               </div>
             </li>
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">June 2021 - Present</span>
-                  <h5>Web Developer - Tech First Impact, Manchester, England</h5>
-                  <p>Working in a team to develop websites for not-for-profit organizations such as GirlGuidesRwanda, Healthy Me Healthy Communities, etc.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895825/tfi_kiuoqt.png"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-            <li>
-              <div class="icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class='row'>
-                <div class=" col-lg-10">
-                  <span class="time">May 2019 - July 2019</span>
-                  <h5>Student Volunteer - Zomato Feeding India Company, India</h5>
-                  <p>During my tenure, I worked on a project which aimed at forming a network of restaurants, hotels and catering services for the distribution of surplus food to the poor. Additionally, it involved weekly and monthly distribution drives.</p>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center align-self-center">
-                  <img class="size-img-square" src="https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895884/zomato_ujgvgj.jpg"  alt="">
-                </div>
-              </div>
-            </li>
-
-
-
-
 
           </ul>
         </div>
       </div>
-
-
-
-
-
 
     </div>
 </section>
