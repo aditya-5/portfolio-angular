@@ -7,15 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  experienceType: boolean[] = [false, true, false];
+  experienceType: boolean[] = [false, true];
 
   extraCurricularItems = [
     {
       iconClass: 'fa-user-graduate',
-      time: 'September 2020 - Present',
+      time: 'September 2020 - June 2023',
       title: 'Student Representative - University of Manchester (Year 1, 2 and 3 - Computer Science)',
       description: 'Represented the views of my fellow mates in the UG Forums, worked closely with the Undergraduate Staff Committee, regularly collected feedback from students through a variety of channels such as Google Sites, Discord, etc.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-user-graduate',
+      time: 'September 2023 - June 2024',
+      title: 'PASS2 Leader - University of Manchester (Year 3 Computer Science)',
+      description: '-',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-user-graduate',
+      time: 'August 2023 - May 2024',
+      title: 'PR & Graphics Lead - Google Student Developer Club',
+      description: '-',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1642077855/gdsc_s1rkqz.png',
       imgClass: 'size-img'
     },
     {
@@ -40,7 +56,7 @@ export class ExperienceComponent implements OnInit {
       title: 'Technical and Outreach Teams - Google Student Developer Club',
       description: 'As part of the club, my role is a blended mix of technical and outreach duties. These involve working on the React front-end design for GDSC\'s annual Hackathon website, managing social media channels such as Instagram, Facebook, and LinkedIn, developing creative and engaging social media strategies and maintaining the Discord Server.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1642077855/gdsc_s1rkqz.png',
-      imgClass: 'size-img-square'
+      imgClass: 'size-img'
     },
     {
       iconClass: 'fa-user-graduate',
@@ -60,14 +76,6 @@ export class ExperienceComponent implements OnInit {
     },
     {
       iconClass: 'fa-user-graduate',
-      time: 'May 2021 - September 2021',
-      title: 'Provisional Committee Member - Gaming Society',
-      description: 'Being on the provisional committee, I am working with the existing committee to plan the future events and raise funds for the society.',
-      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624878352/gaming_hnvmzm.png',
-      imgClass: 'size-img-square'
-    },
-    {
-      iconClass: 'fa-user-graduate',
       time: 'April 2021 - May 2022',
       title: 'Public Relations Officer - Manchester Hindu Society',
       description: 'The role calls for me to maintain the online presence of the society. This includes creating graphics, maintaining the social media handles, developing the website, etc.',
@@ -83,6 +91,30 @@ export class ExperienceComponent implements OnInit {
       imgClass: 'size-img-square'
     },
     {
+      iconClass: 'fa-briefcase',
+      time: 'October 2021 - June 2022',
+      title: 'Peer Buddy Scheme Mentor - The University of Manchester, Manchester, UK',
+      description: 'The role calls for me to act as a friendly ear to 3 students/week, listen to their concerns and signpost them to the right services, should they need them.',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'June 2021 - May 2022',
+      title: 'Web Developer - Tech First Impact, Manchester, England',
+      description: 'Working in a team to develop websites for not-for-profit organizations such as GirlGuidesRwanda, Healthy Me Healthy Communities, etc.',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895825/tfi_kiuoqt.png',
+      imgClass: 'size-img-square'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'May 2019 - July 2019',
+      title: 'Student Volunteer - Zomato Feeding India Company, India',
+      description: 'During my tenure, I worked on a project which aimed at forming a network of restaurants, hotels and catering services for the distribution of surplus food to the poor. Additionally, it involved weekly and monthly distribution drives.',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895884/zomato_ujgvgj.jpg',
+      imgClass: 'size-img-square'
+    },
+    {
       iconClass: 'fa-user-graduate',
       time: 'September 2017',
       title: 'Head Photographer - Panorama 2k17',
@@ -95,15 +127,47 @@ export class ExperienceComponent implements OnInit {
    workItems = [
     {
       iconClass: 'fa-briefcase',
-      time: 'August 2022 - Present',
+      time: 'June 2024 - Present',
+      title: 'Software Developer - Imago Software, Manchester, UK',
+      description: `Managed application deployments via Digital Ocean and AWS using Docker containers. This included overseeing a complex ecosystem of microservices-based Flask applications and enhancing external authentication mechanisms through portals like Auth0. In a team of four, I adhered to Agile methodologies, optimizing project management. Utilizing tools like Miro and Trello, I facilitated project management tasks including retrospectives, daily standups, and other team activities.`,
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1719955795/imago_osunip.jpg',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'September 2022 - October 2022, September 2023 - October 2023',
+      title: 'Senior AskMe Ambassador - The University of Manchester, Manchester, UK',
+      description: `During the short role at the University's welcome week, I provided guidance and assistance at AskMe Points to familiarize students with key university locations. I also contributed to organizing and managing events like the Start of Year Fair and sports events. Additionally, I facilitated airport pickups to ensure smooth transitions for students from the airport to local accommodations. In a remote capacity, I served as a live chat agent, addressing welcome queries and extending support to students beyond the campus.`,
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'August 2023 - June 2024',
+      title: 'Hornet Representative - The University of Manchester, Manchester, UK',
+      description: `Provided technical support and troubleshooting for residents' computers and network issues in university halls, fostering a supportive tech environment. Collaborated effectively within a diverse team, managed administrative tasks, led instructional sessions, and participated in special projects like Start of Year Information Point teams to promote Hornet and university computing resources. Assisted in network management and maintenance within residence halls, addressing port and cable faults, and escalated complex issues to the management team.`,
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'July 2023 - August 2023',
+      title: 'Software Engineering Intern - The University of Manchester, Manchester, UK',
+      description: 'Collaborated with a research team from the Department of Computer Science on developing NLP methods for carbon counting in cooking recipes and recommending ingredient substitutes. Developed a cross-platform mobile app using Flutter. This app enables users to calculate the carbon footprint of recipes and provides statistics on their cumulative emissions over time.      ',
+      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
+      imgClass: 'size-img'
+    },
+    {
+      iconClass: 'fa-briefcase',
+      time: 'August 2022 - July 2023',
       title: 'RPA IT Placement Developer - MFT National Health Service (NHS), Manchester, UK',
-      description: 'Building automation solutions, updating Intranet site, supporting development of small databases, data analysis, etc. within the finance department.',
+      description: 'The role involved developing bots using Automation Anywhere to replace existing transaction-based manual processes. It also included exploring the utilization of technologies like advanced Excel, macros, and bots for improving efficiency. Additionally, the responsibilities entailed reviewing process maps, documenting existing processes to determine their suitability for automation based on evidence, and integrating advanced Excel, macros, and automation software. Supporting colleagues in understanding GDPR requirements and updating the Finance Department’s intranet pages were also key aspects of the role.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1681503949/MFT_ihnryx.png',
       imgClass: 'size-img-square'
     },
     {
       iconClass: 'fa-briefcase',
-      time: 'August 2022 - Present',
+      time: 'August 2022 - June 2024',
       title: 'Brand Ambassador - RMP Enterprise, London, UK',
       description: 'Representing and enhancing outreach via digital promotions and in-person activities for Lidl, NHS, Vodafone, Skiddle, PoliceNow, As-One, Unilever, Ocado, AlphaSights, CMS-Law, RateMyPlacement, Enterprise and Clyde & Co.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1681503809/1556610306328_tm1pez.jpg',
@@ -120,15 +184,15 @@ export class ExperienceComponent implements OnInit {
     {
       iconClass: 'fa-briefcase',
       time: 'June 2021 - July 2022',
-      title: 'Software Developer - Ocean82, UK',
+      title: 'Software Developer - Ocean82, UK (Part-Time)',
       description: 'As part of the summer internship, I enhanced and deployed a Judging Tool for use by the judges in the World Communication Awards held in London on 27th October 2021 and assisted the judges in solving technical difficulties. My part-time role as a software developer includes implementing a novel idea into a web-based game planned for launch in the B2B and consumer market and maintaining and improving the AWS Server Infrastructure.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1681504094/Ocean82_xlnpja.png',
       imgClass: 'size-img-square'
     },
     {
       iconClass: 'fa-briefcase',
-      time: 'October 2021 - Present',
-      title: 'Web Developer - ProjectUp, Delhi, India',
+      time: 'October 2021 - February 2023',
+      title: 'Web Developer - ProjectUp, Delhi, India (Part-Time)',
       description: 'The role involves developing and enhancing two WordPress websites (ProjectUp.in and IJPSL.in), researching the best SEO strategy for the websites, and managing Domain and Email hosting for the team.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1642077163/Project-uP-original-logo-_3-150x150_vrorkq.png',
       imgClass: 'size-img-square'
@@ -137,7 +201,7 @@ export class ExperienceComponent implements OnInit {
       iconClass: 'fa-briefcase',
       time: 'July 2021',
       title: 'Technology Insight Intern - Discover',
-      description: '-',
+      description: 'During a two-day insight internship at Discover, I gained an extensive inside look into the company, networked with industry professionals, and learned about future employment opportunities at Discover.',
       imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624880131/discover_gh6sgm.png',
       imgClass: 'size-img-square'
     },
@@ -174,34 +238,6 @@ export class ExperienceComponent implements OnInit {
       imgClass: 'size-img-square'
     }
   ];
-
-  volunteerItems = [
-    {
-      iconClass: 'fa-briefcase',
-      time: 'October 2021 - June 2022',
-      title: 'Peer Buddy Scheme Mentor - The University of Manchester, Manchester, UK',
-      description: 'The role calls for me to act as a friendly ear to 3 students/week, listen to their concerns and signpost them to the right services, should they need them.',
-      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624876043/logo_manc_qktqa8.png',
-      imgClass: 'size-img'
-    },
-    {
-      iconClass: 'fa-briefcase',
-      time: 'June 2021 - Present',
-      title: 'Web Developer - Tech First Impact, Manchester, England',
-      description: 'Working in a team to develop websites for not-for-profit organizations such as GirlGuidesRwanda, Healthy Me Healthy Communities, etc.',
-      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895825/tfi_kiuoqt.png',
-      imgClass: 'size-img-square'
-    },
-    {
-      iconClass: 'fa-briefcase',
-      time: 'May 2019 - July 2019',
-      title: 'Student Volunteer - Zomato Feeding India Company, India',
-      description: 'During my tenure, I worked on a project which aimed at forming a network of restaurants, hotels and catering services for the distribution of surplus food to the poor. Additionally, it involved weekly and monthly distribution drives.',
-      imgUrl: 'https://res.cloudinary.com/dbsuehmlk/image/upload/v1624895884/zomato_ujgvgj.jpg',
-      imgClass: 'size-img-square'
-    }
-  ];
-
 
   constructor() { }
 
