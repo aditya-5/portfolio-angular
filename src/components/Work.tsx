@@ -35,9 +35,13 @@ const Work = () => {
       const flexEl = section.querySelector(".work-flex") as HTMLElement;
       if (!flexEl) return;
 
-      // scrollWidth = total content width including overflow
-      // clientWidth = visible width
-      const translateX = flexEl.scrollWidth - flexEl.clientWidth;
+      // Sum up actual box widths (not scrollWidth which is inflated by 50000vw pseudo-elements)
+      const boxes = flexEl.querySelectorAll(".project-box");
+      let totalWidth = 0;
+      boxes.forEach((box) => {
+        totalWidth += (box as HTMLElement).offsetWidth;
+      });
+      const translateX = Math.max(0, totalWidth - section.offsetWidth);
       
       if (translateX <= 0) return;
 
