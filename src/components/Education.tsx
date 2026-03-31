@@ -6,9 +6,16 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const educationData = [
-  { name: "First Class Honours", category: "BSc Computer Science with Industrial Experience", tools: "Agile, NLP, ML, Distributed Systems", image: "https://res.cloudinary.com/dbsuehmlk/image/upload/v1624882818/tap_vim4pi.gif", school: "University of Manchester" },
-  { name: "French Language Programme", category: "Level 1 Certification", tools: "French", image: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png", school: "Indian Institute of Technology, Kanpur" },
-  { name: "AISSCE & AISSE", category: "High School Diploma", tools: "Physics, Math, Chem, Web Tech", image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/CBSE_Logo.png", school: "Delhi Public School, Kanpur" },
+  { 
+    school: "University of Manchester, UK", 
+    year: "July 2024", 
+    desc: "BSc. (Hons) Computer Science with Industrial Experience | First Class, 75%" 
+  },
+  { 
+    school: "Delhi Public School, Kanpur, India", 
+    year: "May 2019", 
+    desc: "A-Level Equivalent (AISSCE): 96.5% | GCSE Equivalent (AISSE): 10/10 CGPA" 
+  }
 ];
 
 const Education = () => {
@@ -62,19 +69,13 @@ const Education = () => {
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
-
                   <div>
-                    <h4>{project.name}</h4>
-                    <p>{project.school}</p>
+                    <h4 style={{textAlign: "right"}}>{project.school}</h4>
+                    <p style={{textAlign: "right", marginTop: "5px"}}>{project.year}</p>
                   </div>
                 </div>
-                <h4>{project.category}</h4>
-                <p>{project.tools}</p>
-              </div>
-              <div className="work-image">
-                <div className="work-image-in">
-                  <img src={project.image} alt={project.name} style={{ maxHeight: "200px" }} />
-                </div>
+                <h4 style={{marginTop: "20px"}}>{project.desc.split('|')[0]}</h4>
+                {project.desc.split('|')[1] && <p style={{marginTop: "10px", fontSize: "16px"}}>{project.desc.split('|')[1]}</p>}
               </div>
             </div>
           ))}

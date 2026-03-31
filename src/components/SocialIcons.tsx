@@ -2,6 +2,8 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa6";
+import { TbNotes } from "react-icons/tb";
+import HoverLinks from "./HoverLinks";
 import "./styles/SocialIcons.css";
 import { useEffect } from "react";
 
@@ -66,6 +68,12 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
+      <a className="resume-button" href="#">
+        <HoverLinks text="RESUME" />
+        <span>
+          <TbNotes />
+        </span>
+      </a>
     </div>
   );
 };

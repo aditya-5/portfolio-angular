@@ -1,5 +1,5 @@
 .icons-section {
-  position: fixed;
+  position: absolute;
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
   bottom: 0;

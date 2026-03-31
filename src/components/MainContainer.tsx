@@ -10,6 +10,7 @@ import Work from "./Work";
 import setSplitText from "./utils/splitText";
 import TechStack from "./TechStack";
 import Education from "./Education";
+import Contact from "./Contact";
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
@@ -43,6 +44,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Education />
             <TechStack />
             <Work />
+            <Contact />
           </div>
         </div>
       </div>

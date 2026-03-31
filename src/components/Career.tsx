@@ -4,31 +4,31 @@ const careerData = [
   {
     role: "Software Graduate Engineer",
     company: "Jaguar Land Rover",
-    year: "Sept 2024 - Present",
+    year: "September 2024 – Present",
     desc: "Built the CIARA Configuration Toolset for zero-touch test rig deployment using AWS and Next.js. Engineered telemetry pipelines and maintained core APIs."
   },
   {
     role: "Software Developer Intern",
     company: "Imago Software",
-    year: "Jun 2024 - Aug 2024",
+    year: "June 2024 – August 2024",
     desc: "Developed a cross-platform Flutter app for real-time metric visualisation and optimised Python API deployments on AWS."
   },
   {
     role: "Software Engineering Intern",
     company: "University of Manchester",
-    year: "Jul 2022 & Jul 2023",
+    year: "July 2022 & July 2023",
     desc: "Trained and deployed ML fact-verification models and mobile applications."
   },
   {
     role: "Robotic Process Automation Engineer",
     company: "National Health Service (NHS)",
-    year: "Aug 2022 - Jul 2023",
+    year: "August 2022 – July 2023",
     desc: "Architected an RPA bot using Automation Anywhere to process 180,000+ referral letters out of a manual backlog."
   },
   {
     role: "Full-Stack Developer (Part-time)",
     company: "Ocean82",
-    year: "Jun 2021 - Jul 2022",
+    year: "June 2021 – July 2022",
     desc: "Architected a MERN stack stock-trading simulation and scaled a live event judging platform to 5x capacity."
   },
   {
