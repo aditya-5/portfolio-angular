@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import SocialIcons from "./SocialIcons";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {
@@ -25,6 +26,7 @@ const Landing = ({ children }: PropsWithChildren) => {
               <div className="landing-h2-info-1">Engineer</div>
             </h2>
           </div>
+          <SocialIcons />
         </div>
         {children}
       </div>

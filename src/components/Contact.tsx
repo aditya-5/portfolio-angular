@@ -14,12 +14,6 @@ const Contact = () => {
                 aditya.7@outlook.com
               </a>
             </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="#" data-cursor="disable">
-                Available on request
-              </a>
-            </p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
@@ -38,22 +32,6 @@ const Contact = () => {
               className="contact-social"
             >
               Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href="https://twitter.com/ImAa45"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/imaa45"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">

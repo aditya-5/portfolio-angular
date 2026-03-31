@@ -186,8 +186,10 @@
 
 .landing-info {
   position: absolute;
-  left: 0;
-  top: 12%;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 40px;
+  top: inherit;
   z-index: 9;
 }
 .landing-info h3 {

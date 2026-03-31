@@ -15,6 +15,11 @@ const educationData = [
     school: "Delhi Public School, Kanpur, India", 
     year: "May 2019", 
     desc: "A-Level Equivalent (AISSCE): 96.5% | GCSE Equivalent (AISSE): 10/10 CGPA" 
+  },
+  { 
+    school: "Indian Institute of Technology, Kanpur", 
+    year: "May 2020", 
+    desc: "French Language Programme | Level 1 Certification" 
   }
 ];
 
