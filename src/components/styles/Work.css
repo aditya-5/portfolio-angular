@@ -204,7 +204,25 @@
   .work-container {
     align-content: normal;
   }
+  .work-section {
+    height: auto;
+    padding: 50px 0;
+  }
   .work-flex {
     height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .work-flex::-webkit-scrollbar {
+    display: none;
+  }
+  .work-box {
+    scroll-snap-align: center;
+  }
+  .work-flex::before,
+  .work-flex::after {
+    display: none;
   }
 }

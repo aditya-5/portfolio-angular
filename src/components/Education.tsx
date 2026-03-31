@@ -13,7 +13,8 @@ const educationData = [
 
 const Education = () => {
   useGSAP(() => {
-  let translateX: number = 0;
+    if (window.innerWidth <= 1025) return;
+    let translateX: number = 0;
 
   function setTranslateX() {
     const box = document.getElementsByClassName("edu-box");

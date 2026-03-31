@@ -40,9 +40,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <About />
             <WhatIDo />
             <Career />
-            <Work />
             <Education />
-            {isDesktopView && <TechStack />}
+            <TechStack />
+            <Work />
           </div>
         </div>
       </div>
