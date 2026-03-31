@@ -87,20 +87,20 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Full Stack</h4>
+              <h3>DEVELOP & DEPLOY</h3>
+              <h4>Full Stack & DevOps</h4>
               <p>
-                Building scalable, robust microservices and robust full-stack applications tailored to user needs.
+                Building scalable, robust full-stack applications and architecting cloud deployments, IoT infrastructure, and containerized backends.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">Flutter</div>
+                <div className="what-tags">JavaScript/TypeScript</div>
+                <div className="what-tags">React & Next.js</div>
+                <div className="what-tags">Node.js / Python</div>
+                <div className="what-tags">Databases (SQL/NoSQL)</div>
+                <div className="what-tags">AWS</div>
+                <div className="what-tags">Docker & CI/CD</div>
+                <div className="what-tags">IoT Core</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -124,53 +124,17 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DEPLOY</h3>
-              <h4>AWS & Infrastructure</h4>
-              <p>
-                Architecting and managing cloud deployments, IoT infrastructure, and reliable containerized solutions.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">AWS</div>
-                <div className="what-tags">Docker</div>
-                <div className="what-tags">CI/CD</div>
-                <div className="what-tags">Traefik</div>
-                <div className="what-tags">IoT Core</div>
-                <div className="what-tags">Greengrass</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 2)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
               <h3>AI</h3>
-              <h4>LLM & Data</h4>
+              <h4>LLM & Data Pipelines</h4>
               <p>
-                Training models, building RAG pipelines, and integrating meaningful AI features into applications.
+                Training models, building real-time RAG pipelines, and integrating meaningful AI features into applications along with data analytics.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">LLMs</div>
                 <div className="what-tags">OpenSearch</div>
-                <div className="what-tags">Data Pipelines</div>
                 <div className="what-tags">Machine Learning</div>
+                <div className="what-tags">Data Pipelines</div>
                 <div className="what-tags">Grafana</div>
               </div>
               <div className="what-arrow"></div>

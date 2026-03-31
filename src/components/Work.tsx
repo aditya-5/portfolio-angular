@@ -20,15 +20,13 @@ const Work = () => {
   let translateX: number = 0;
 
   function setTranslateX() {
-    const box = document.getElementsByClassName("work-box");
-    const rectLeft = document
-      .querySelector(".work-container")!
-      .getBoundingClientRect().left;
-    const rect = box[0].getBoundingClientRect();
-    const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-    let padding: number =
-      parseInt(window.getComputedStyle(box[0]).padding) / 2;
-    translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+    const workFlex = document.querySelector(".work-flex") as HTMLElement;
+    if (workFlex) {
+      // Calculate how far we need to translate: total width of content minus screen width
+      translateX = workFlex.scrollWidth - document.documentElement.clientWidth;
+      // Add a bit of buffer
+      translateX += 200; 
+    }
   }
 
   setTranslateX();
@@ -37,8 +35,8 @@ const Work = () => {
     scrollTrigger: {
       trigger: ".work-section",
       start: "top top",
-      end: `+=${translateX}`, // Use actual scroll width
-      scrub: true,
+      end: `+=${translateX}`, // Scrub distance proportionally
+      scrub: 1, // Smooth dragging effect
       pin: true,
       id: "work",
     },
