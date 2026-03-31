@@ -40,7 +40,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Education />
-            <TechStack />
+            {/* TEMP DISABLED: <TechStack /> */}
             <Work />
             <Contact />
           </div>

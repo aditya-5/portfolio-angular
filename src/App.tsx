@@ -11,9 +11,7 @@ const App = () => {
       <LoadingProvider>
         <Suspense>
           <MainContainer>
-            <Suspense>
-              <CharacterModel />
-            </Suspense>
+            {/* TEMP DISABLED: <Suspense><CharacterModel /></Suspense> */}
           </MainContainer>
         </Suspense>
       </LoadingProvider>
