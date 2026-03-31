@@ -3,8 +3,9 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const projects = [
   { name: "WhatsApp CRM & Broadcast Dashboard", category: "Web App", tools: "React, FastAPI, PostgreSQL, Meta Graph API, WebSockets", image: "", desc: "Real-time CRM dashboard integrating the WhatsApp Cloud API for two-way customer conversations and bulk broadcast campaigns. Utilizes a high-performance FastAPI async backend with a WebSocket layer for instant bi-directional event updates." },
@@ -20,46 +21,52 @@ const projects = [
 ];
 
 const Work = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
     if (window.innerWidth <= 1025) return;
-    let translateX: number = 0;
+    if (!sectionRef.current) return;
 
-  function setTranslateX() {
-    const boxes = Array.from(document.getElementsByClassName("project-box")) as HTMLElement[];
-    if (boxes.length > 0) {
-      const lastBox = boxes[boxes.length - 1];
-      const lastBoxRight = lastBox.getBoundingClientRect().right;
-      // How far the last card's right edge is past the viewport right edge
-      translateX = Math.max(0, lastBoxRight - window.innerWidth + 40);
-    }
-  }
+    // Wait one frame so DOM is fully painted and measurable
+    requestAnimationFrame(() => {
+      const section = sectionRef.current;
+      if (!section) return;
 
-  setTranslateX();
+      const flexEl = section.querySelector(".work-flex") as HTMLElement;
+      if (!flexEl) return;
 
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".work-section",
-      start: "top top",
-      end: `+=${translateX}`,
-      scrub: 1,
-      pin: true,
-      pinSpacing: true,
-      id: "work",
-    },
-  });
+      // scrollWidth = total content width including overflow
+      // clientWidth = visible width
+      const translateX = flexEl.scrollWidth - flexEl.clientWidth;
+      
+      if (translateX <= 0) return;
 
-  timeline.to(".work-flex", {
-    x: -translateX,
-    ease: "none",
-  });
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: `+=${translateX}`,
+          scrub: 1,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          id: "work",
+        },
+      });
 
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
+      timeline.to(flexEl, {
+        x: -translateX,
+        ease: "none",
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getById("work")?.kill(true);
+    };
+  }, []);
+
   return (
-    <div className="work-section" id="work">
+    <div className="work-section" id="work" ref={sectionRef}>
       <div className="work-container section-container">
          <h2>
           My <span>Projects</span>

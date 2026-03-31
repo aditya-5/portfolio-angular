@@ -1,9 +1,10 @@
-import "./styles/Work.css"; // Reuse Work CSS classes but with our own wrapper class logic or just copy Work.css contents to Edu.css
+import "./styles/Work.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const educationData = [
   { 
@@ -24,45 +25,52 @@ const educationData = [
 ];
 
 const Education = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
     if (window.innerWidth <= 1025) return;
-    let translateX: number = 0;
+    if (!sectionRef.current) return;
 
-    function setTranslateX() {
-      const boxes = Array.from(document.getElementsByClassName("edu-box")) as HTMLElement[];
-      if (boxes.length > 0) {
-        const lastBox = boxes[boxes.length - 1];
-        const lastBoxRight = lastBox.getBoundingClientRect().right;
-        translateX = Math.max(0, lastBoxRight - window.innerWidth + 40);
-      }
-    }
+    // Wait one frame so DOM is fully painted and measurable
+    requestAnimationFrame(() => {
+      const section = sectionRef.current;
+      if (!section) return;
 
-    setTranslateX();
+      const flexEl = section.querySelector(".edu-flex") as HTMLElement;
+      if (!flexEl) return;
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".edu-section",
-        start: "top top",
-        end: `+=${translateX}`,
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        id: "edu",
-      },
-    });
+      // scrollWidth = total content width including overflow
+      // clientWidth = visible width
+      const translateX = flexEl.scrollWidth - flexEl.clientWidth;
+      
+      if (translateX <= 0) return;
 
-    timeline.to(".edu-flex", {
-      x: -translateX,
-      ease: "none",
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: `+=${translateX}`,
+          scrub: 1,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          id: "edu",
+        },
+      });
+
+      timeline.to(flexEl, {
+        x: -translateX,
+        ease: "none",
+      });
     });
 
     return () => {
-      timeline.kill();
-      ScrollTrigger.getById("edu")?.kill();
+      ScrollTrigger.getById("edu")?.kill(true);
     };
   }, []);
+
   return (
-    <div className="work-section edu-section" id="education">
+    <div className="work-section edu-section" id="education" ref={sectionRef}>
       <div className="work-container edu-container section-container">
         <h2>
           My <span>Education</span>
