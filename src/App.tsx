@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import "./App.css";
 
-const CharacterModel = lazy(() => import("./components/Character"));
+// CharacterModel import removed while 3D is temp disabled
 const MainContainer = lazy(() => import("./components/MainContainer"));
 import { LoadingProvider } from "./context/LoadingProvider";
 

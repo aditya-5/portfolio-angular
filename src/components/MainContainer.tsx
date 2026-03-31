@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
-import TechStack from "./TechStack";
+// TechStack import removed while 3D balls temp disabled
 import Education from "./Education";
 import Contact from "./Contact";
 const MainContainer = ({ children }: PropsWithChildren) => {
