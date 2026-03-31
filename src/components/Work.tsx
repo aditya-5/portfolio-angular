@@ -20,12 +20,14 @@ const Work = () => {
   let translateX: number = 0;
 
   function setTranslateX() {
-    const workFlex = document.querySelector(".work-flex") as HTMLElement;
-    if (workFlex) {
-      // Calculate how far we need to translate: total width of content minus screen width
-      translateX = workFlex.scrollWidth - document.documentElement.clientWidth;
-      // Add a bit of buffer
-      translateX += 200; 
+    const box = document.getElementsByClassName("project-box");
+    // Ensure boxes exist before measuring
+    if (box.length > 0) {
+      const rectLeft = document.querySelector(".work-container")!.getBoundingClientRect().left;
+      const rect = box[0].getBoundingClientRect();
+      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
+      let padding = parseInt(window.getComputedStyle(box[0]).padding) / 2;
+      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
     }
   }
 
@@ -35,7 +37,7 @@ const Work = () => {
     scrollTrigger: {
       trigger: ".work-section",
       start: "top top",
-      end: `+=${translateX}`, // Scrub distance proportionally
+      end: `+=${translateX}`, // Correct scrub distance based on total box width
       scrub: 1, // Smooth dragging effect
       pin: true,
       id: "work",
@@ -61,7 +63,7 @@ const Work = () => {
         </h2>
         <div className="work-flex">
           {projects.map((project, index) => (
-            <div className="work-box" key={index}>
+            <div className="work-box project-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
