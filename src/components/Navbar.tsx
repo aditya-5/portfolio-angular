@@ -42,15 +42,12 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
-        </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:aditya.7@outlook.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          aditya.7@outlook.com
         </a>
         <ul>
           <li>
@@ -64,8 +61,19 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                const pass = prompt("Enter password:");
+                if (pass === "aditya") {
+                  window.open("/assets/CV_2026.pdf", "_blank");
+                } else if (pass) {
+                  alert("Incorrect password.");
+                }
+              }}
+            >
+              <HoverLinks text="RESUME" />
             </a>
           </li>
         </ul>
