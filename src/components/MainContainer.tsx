@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
-// TechStack import removed while 3D balls temp disabled
+import TechStack from "./TechStack";
 import Education from "./Education";
 import Contact from "./Contact";
 const MainContainer = ({ children }: PropsWithChildren) => {
@@ -40,7 +40,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Education />
-            {/* TEMP DISABLED: <TechStack /> */}
+            <TechStack />
             <Work />
             <Contact />
           </div>

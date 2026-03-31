@@ -24,11 +24,7 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  useEffect(() => {
-    // Auto-complete loading when no 3D model is present to call loaded()
-    const timer = setTimeout(() => setLoading(100), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+  useEffect(() => {}, [loading]);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
