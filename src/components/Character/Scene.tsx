@@ -29,10 +29,11 @@ const Scene = () => {
 
       const renderer = new THREE.WebGLRenderer({
         alpha: true,
-        antialias: true,
+        antialias: window.devicePixelRatio < 2, // skip AA on Retina — saves ~30% GPU
+        powerPreference: "high-performance",
       });
       renderer.setSize(container.width, container.height);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // cap at 1.5
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
@@ -46,6 +47,14 @@ const Scene = () => {
       let headBone: THREE.Object3D | null = null;
       let screenLight: any | null = null;
       let mixer: THREE.AnimationMixer;
+      let isVisible = true;
+
+      // Pause rendering when character is scrolled off-screen
+      const observer = new IntersectionObserver(
+        ([entry]) => { isVisible = entry.isIntersecting; },
+        { threshold: 0 }
+      );
+      if (canvasDiv.current) observer.observe(canvasDiv.current);
 
       const clock = new THREE.Clock();
 
@@ -108,6 +117,7 @@ const Scene = () => {
       }
       const animate = () => {
         requestAnimationFrame(animate);
+        if (!isVisible) return; // skip render when off screen
         if (headBone) {
           handleHeadRotation(
             headBone,
