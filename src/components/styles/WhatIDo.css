@@ -208,6 +208,12 @@
   height: 100%;
   overflow: hidden;
 }
+
+/* Allow tags to be fully visible when card is expanded */
+.what-noTouch:hover .what-content-in,
+.what-content-active .what-content-in {
+  overflow: visible;
+}
 .what-content-in h5 {
   font-weight: 300;
   opacity: 0.5;

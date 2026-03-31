@@ -155,6 +155,7 @@
   z-index: 3;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  pointer-events: none;
 }
 .landing-intro {
   position: absolute;
