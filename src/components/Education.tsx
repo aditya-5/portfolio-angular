@@ -32,13 +32,13 @@ const Education = () => {
     const boxes = document.getElementsByClassName("edu-box");
     const flex = document.querySelector(".edu-flex") as HTMLElement;
     if (boxes.length > 0 && flex) {
-      const viewportWidth = window.innerWidth;
       const totalBoxWidth = Array.from(boxes).reduce(
         (acc, b) => acc + b.getBoundingClientRect().width,
         0
       );
-      const flexLeft = flex.getBoundingClientRect().left;
-      translateX = Math.max(0, totalBoxWidth + flexLeft - viewportWidth + 80);
+      // How far past the right edge of the viewport the cards extend
+      const flexRight = flex.getBoundingClientRect().left + totalBoxWidth;
+      translateX = Math.max(0, flexRight - window.innerWidth + 40);
     }
   }
 

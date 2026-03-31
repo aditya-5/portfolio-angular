@@ -65,22 +65,6 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                const pass = prompt("Enter password:");
-                if (pass === "aditya") {
-                  window.open("/assets/CV_2026.pdf", "_blank");
-                } else if (pass) {
-                  alert("Incorrect password.");
-                }
-              }}
-            >
-              <HoverLinks text="RESUME" />
-            </a>
-          </li>
-          <li>
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />
             </a>

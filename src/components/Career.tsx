@@ -34,22 +34,21 @@ const careerData = [
   {
     role: "Technology Spring Insight Intern",
     company: "The Hut Group",
-    year: "Apr 2021",
+    year: "April 2021",
     desc: "Gained deep insight into THG's engineering culture and worked on a group coding challenge."
   },
   {
     role: "Technology Insight Intern",
     company: "Optiver",
-    year: "Apr 2021",
+    year: "April 2021",
     desc: "Explored algorithmic trading and built a simulated Python Algo-Trade bot in a team (ranked #4 out of 23 teams)."
   },
   {
     role: "Campus Ambassador",
     company: "Alkymia Tech",
-    year: "Aug 2019 - Oct 2019",
+    year: "August 2019 – October 2019",
     desc: "Conducted market research and user onboarding campaigns for the PopShot web app. Awarded the Star Performer title."
   }
-
 ];
 
 const Career = () => {

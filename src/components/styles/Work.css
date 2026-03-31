@@ -226,3 +226,14 @@
     display: none;
   }
 }
+/* Education section overrides — must not inherit Work's alternating layout or negative margin */
+.edu-section .work-flex {
+  margin-left: 0;
+  padding-right: 0;
+}
+.edu-section .work-flex .edu-box:nth-child(even) {
+  flex-direction: column;
+}
+.edu-section .work-container {
+  overflow: visible;
+}

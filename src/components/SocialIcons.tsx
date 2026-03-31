@@ -68,7 +68,19 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          const pass = prompt("Enter password:");
+          if (pass === "aditya") {
+            window.open("/assets/CV_2026.pdf", "_blank");
+          } else if (pass) {
+            alert("Incorrect password.");
+          }
+        }}
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
