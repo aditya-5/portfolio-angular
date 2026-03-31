@@ -87,7 +87,7 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP & DEPLOY</h3>
+              <h3>DEVELOP</h3>
               <h4>Full Stack & DevOps</h4>
               <p>
                 Building scalable, robust full-stack applications and architecting cloud deployments, IoT infrastructure, and containerized backends.
