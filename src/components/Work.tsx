@@ -25,14 +25,12 @@ const Work = () => {
     let translateX: number = 0;
 
   function setTranslateX() {
-    const box = document.getElementsByClassName("project-box");
-    // Ensure boxes exist before measuring
-    if (box.length > 0) {
-      const rectLeft = document.querySelector(".work-container")!.getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding = parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+    const boxes = Array.from(document.getElementsByClassName("project-box")) as HTMLElement[];
+    if (boxes.length > 0) {
+      const lastBox = boxes[boxes.length - 1];
+      const lastBoxRight = lastBox.getBoundingClientRect().right;
+      // How far the last card's right edge is past the viewport right edge
+      translateX = Math.max(0, lastBoxRight - window.innerWidth + 40);
     }
   }
 
@@ -42,9 +40,10 @@ const Work = () => {
     scrollTrigger: {
       trigger: ".work-section",
       start: "top top",
-      end: `+=${translateX}`, // Correct scrub distance based on total box width
-      scrub: 1, // Smooth dragging effect
+      end: `+=${translateX}`,
+      scrub: 1,
       pin: true,
+      pinSpacing: true,
       id: "work",
     },
   });
@@ -54,7 +53,6 @@ const Work = () => {
     ease: "none",
   });
 
-  // Clean up (optional, good practice)
   return () => {
     timeline.kill();
     ScrollTrigger.getById("work")?.kill();

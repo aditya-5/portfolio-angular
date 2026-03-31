@@ -28,43 +28,39 @@ const Education = () => {
     if (window.innerWidth <= 1025) return;
     let translateX: number = 0;
 
-  function setTranslateX() {
-    const boxes = document.getElementsByClassName("edu-box");
-    const flex = document.querySelector(".edu-flex") as HTMLElement;
-    if (boxes.length > 0 && flex) {
-      const totalBoxWidth = Array.from(boxes).reduce(
-        (acc, b) => acc + b.getBoundingClientRect().width,
-        0
-      );
-      // How far past the right edge of the viewport the cards extend
-      const flexRight = flex.getBoundingClientRect().left + totalBoxWidth;
-      translateX = Math.max(0, flexRight - window.innerWidth + 40);
+    function setTranslateX() {
+      const boxes = Array.from(document.getElementsByClassName("edu-box")) as HTMLElement[];
+      if (boxes.length > 0) {
+        const lastBox = boxes[boxes.length - 1];
+        const lastBoxRight = lastBox.getBoundingClientRect().right;
+        translateX = Math.max(0, lastBoxRight - window.innerWidth + 40);
+      }
     }
-  }
 
-  setTranslateX();
+    setTranslateX();
 
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".edu-section",
-      start: "top top",
-      end: `+=${translateX}`,
-      scrub: 1,
-      pin: true,
-      id: "edu",
-    },
-  });
+    let timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".edu-section",
+        start: "top top",
+        end: `+=${translateX}`,
+        scrub: 1,
+        pin: true,
+        pinSpacing: true,
+        id: "edu",
+      },
+    });
 
-  timeline.to(".edu-flex", {
-    x: -translateX,
-    ease: "none",
-  });
+    timeline.to(".edu-flex", {
+      x: -translateX,
+      ease: "none",
+    });
 
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("edu")?.kill();
-  };
-}, []);
+    return () => {
+      timeline.kill();
+      ScrollTrigger.getById("edu")?.kill();
+    };
+  }, []);
   return (
     <div className="work-section edu-section" id="education">
       <div className="work-container edu-container section-container">
