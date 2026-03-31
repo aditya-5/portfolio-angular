@@ -29,13 +29,16 @@ const Education = () => {
     let translateX: number = 0;
 
   function setTranslateX() {
-    const box = document.getElementsByClassName("edu-box");
-    if (box.length > 0) {
-      const rectLeft = document.querySelector(".edu-container")!.getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding = parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+    const boxes = document.getElementsByClassName("edu-box");
+    const flex = document.querySelector(".edu-flex") as HTMLElement;
+    if (boxes.length > 0 && flex) {
+      const viewportWidth = window.innerWidth;
+      const totalBoxWidth = Array.from(boxes).reduce(
+        (acc, b) => acc + b.getBoundingClientRect().width,
+        0
+      );
+      const flexLeft = flex.getBoundingClientRect().left;
+      translateX = Math.max(0, totalBoxWidth + flexLeft - viewportWidth + 80);
     }
   }
 
@@ -45,8 +48,8 @@ const Education = () => {
     scrollTrigger: {
       trigger: ".edu-section",
       start: "top top",
-      end: `+=${translateX}`, // Scrub distance proportionally
-      scrub: 1, // Smooth dragging effect
+      end: `+=${translateX}`,
+      scrub: 1,
       pin: true,
       id: "edu",
     },

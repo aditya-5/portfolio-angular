@@ -21,6 +21,16 @@ const imageUrls = [
   "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/python.svg",
+  "/images/aws.svg",
+  "/images/docker.svg",
+  "/images/fastapi.svg",
+  "/images/postgresql.svg",
+  "/images/flutter.svg",
+  "/images/angular.svg",
+  "/images/pytorch.svg",
+  "/images/grafana.svg",
+  "/images/anthropic.svg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -169,7 +179,6 @@ const TechStack = () => {
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
-
       <Canvas
         shadows
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
@@ -207,6 +216,36 @@ const TechStack = () => {
           <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
       </Canvas>
+      <div style={{
+        position: "absolute",
+        bottom: "60px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "10px 30px",
+        justifyContent: "center",
+        maxWidth: "80%",
+        pointerEvents: "none",
+      }}>
+        {[
+          "AI / LLMs: Claude API, RAG, Context Engineering",
+          "Cloud: AWS, Docker, CI/CD",
+          "Backend: Node.js, Python, FastAPI, Flask, PostgreSQL, MongoDB",
+          "Frontend: Next.js, React, TypeScript, Flutter, Angular",
+          "Observability: Grafana, Tableau, Elastic Stack",
+          "Auth: AWS Cognito, OAuth 2.0, Auth0",
+        ].map((cat, i) => (
+          <span key={i} style={{
+            fontSize: "11px",
+            fontWeight: 500,
+            letterSpacing: "1.5px",
+            textTransform: "uppercase",
+            color: "#a07fc0",
+            whiteSpace: "nowrap",
+          }}>{cat}</span>
+        ))}
+      </div>
     </div>
   );
 };

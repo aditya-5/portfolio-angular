@@ -100,6 +100,14 @@ body {
   margin-bottom: -100px;
 }
 
+.tech-canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .techstack h2 {
   font-size: 80px;
   text-align: center;
